@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+
+    --red: #EE2C2C;
+    --lightOrange: #F8BC3B;
+    --dark: #251D2D;
+    --midDark: #3D3940;
+    --white: #FFFFFF;
+    --redWine: #711f24;
+}
+/*aca le quito las margenes q trae el navegador*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*con var llamo los colores del root─*/
+body{
+    font-family: 'poppins',sans-serif;
+    background:var(--white) ;
+}
+/*outline establece los mismos estilos a todos los perfiles del mismo elemento*/
+button{
+    outline: 0;
+}
+
+header{
+    width: 100%;
+}
+.container{
+    padding: 40px 0 0 0 ;
+    
+}
+
+
+
+.btn-container{
+    display:flex;
+    justify-content:flex-end;
+    padding: 10px 30px;
+    text-align: right;
+    position: relative;
+    width: 100%;
+    /* flex-grow: 1; */
+    
+}
+
+
+/*search*/
+.btn-container .input{
+    border: 1px solid var(--midDark);
+    font-size: 16px;
+    background-color:white;
+    width: 30px; 
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 50px;
+    -webkit-transition: width 0.4s ease;
+    transition:width 0.5s ease; 
+    position:absolute;
+    
+}
+.btn-container .back{
+    border: 1px solid var(--midDark);
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 30px;
+    justify-content:space-between;
+    border-radius: 50px;
+    
+    
+
+}
+
+  
+/*las medidas del search que se meten el el active input*/
+.btn-container button{
+    width: 32px;
+    height: 30px;
+    border: 1px solid var(--redWine);
+    outline: 0;
+    color:var(--redWine) ;
+    border-radius: 50px;
+    background: transparent;
+    position: absolute;
+    z-index: 1;
+ }
+
+ /*se realiza la accion de esconder el search*/
+ .btn-container.active input{
+     width: 200px;
+     
+     
+ }
+ 
+.container-notice{
+    display: flex;
+    padding: 0 30px;
+    justify-content:space-between;
+    margin-top: 30px;
+    color: var(--redWine);
+   
+}
+
+.container-notice .notice .notice-title{
+    font-size: 24px;
+    line-height: 0;
+    margin: 16px 0 12px 0;
+
+}
+.container-notice .notice .notice-schedule{
+    font-size: 14px;
+
+}
+.container-notice .notice .notice-time{
+    font-size: 14px;
+    border: 1px solid var(--redWine);
+    border-radius: 43px;
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    width: 137px;
+}
+ .logo-container{
+     display:flex;
+     flex-direction: column;
+     align-items:center;
+     font-size: 14px;
+     
+    
+ }
+ .logo-container .logo{
+     line-height: 0;
+ }
+ .logo-text{
+     background: var(--lightOrange);
+     font-size: 14px;
+     padding: 1px 6px;
+     border-radius: 15px;
+     
+ }
+ .categories{
+     margin-bottom: 20px;
+     padding: 0 0 0 30px;
+     overflow: hidden;
+     
+ }
+
+.categories-title{
+    font-size: 22px;
+    color: var(--redWine);
+
+}
+.btn-category{
+    background: var(--midDark);
+    color:var(--white);
+    border-radius: 43px;
+    border:0;
+    padding: 7px 12px 7px 16px;
+    margin-right: 10px;
+
+    
+
+
+
+}
+/*flex me muestra en horizontal y hidden esconden los elementos q s desbordan*/
+.classification-button{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    
+    
+}
+/*::seudoclase  w*/
+.classification-button::-webkit-scrollbar {
+     display: none; 
+
+
+}
+
+.classification-button .active{
+    background: var(--lightOrange);
+    color: var(--dark);
+}
+
+.categories-buttons .active{
+    background: var(--F8BC3B);
+}
+/*margin bottom para dar espacio entre el container y el footer
+flex auto envia el footer abajo*/
+.container-products{
+   padding: 10px 30px;
+   color: var(--redWine); 
+   margin-bottom: 15px;
+   flex:1 auto;
+   width: 100%;
+   height: 489px;
+   scroll-behavior: smooth;
+   overflow: scroll;
+   
+}
+/*para q no se vea el scroll*/
+.container-products::-webkit-scrollbar{
+ display: none;
+
+}
+
+/*margin top le da espacio entre las cajas*/
+.product{
+    border: 1px solid var(--white);
+    border-radius: 15px;
+    display: none;
+    margin-top: 10px;
+    background: rgb(237,197,93);
+    
+    
+}
+.product.show{
+    display: flex;
+}
+
+
+.product-descripcion{
+    color: var(--redWine);
+    font-size: 11px;
+}
+.product-price{
+    color: var(--orange);
+    font-weight: 700;
+    
+}
+ /*https://cssgradient.io/*/
+ .product-text{
+   
+    background: radial-gradient(circle, rgba(237,197,93,0.5690651260504201) 14%, rgba(238,190,44,1) 100%, rgba(232,195,129,0.8547794117647058) 100%);
+    position: relative;
+    margin: 5px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px 0 0 0;
+
+}
+.contadores {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0  10px  10px  0px;
+
+}
+.menos, .mas{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+
+}
+/*etiquetas p dentro de contadores*/
+.contadores p{
+    padding: 0 15px;
+    font-size: 12px;
+
+}
+
+.menos{
+    background-color: white;
+    border: 0.5px solid var(--red);
+    color:var(--orange);
+}
+.mas{
+    background-color: var(--lightOrange);
+    color:var(--dark);
+    border: 0.5x solid var(--red);
+}
+/*footer*/
+
+footer{
+    position: relative;
+    color: var(--white);
+
+}
+/*el carrito boton, se maneja % xq es mas practico x el responsive*/
+.btn-cart-container {
+   position: absolute;
+   left: 50%;
+   width: 60px;
+   height: 60px;
+   font-size: 30px;
+   border-radius: 50px;
+   display: flex;
+   top: 15%;
+   justify-content: center;
+   z-index: 1;
+   transform: translate(-50% ,-50%);
+   align-items: center;
+   background:var(--lightOrange);
+   
+}
+
+.inner-btn-menu{
+    width: 100%;
+    height: 70px;
+    background:var(--red);
+    clip-path: polygon(50% 0, 100% 30%, 100% 100%, 0 100%, 0 30%);
+    display:flex;
+    justify-content: space-between;
+    font-size: 37px;
+    align-items: center;
+    padding:10px 30px 0 30px ;
+}
+
+/*circulo sobre el carrito*/
+.quantity{
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    background: var(--white);
+    border-radius: 14px;
+    color:  var(--dark);
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    border:1px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.view{
+    position: relative;
+    width: 414px;
+    height: 896px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+   
+}
+
+
+

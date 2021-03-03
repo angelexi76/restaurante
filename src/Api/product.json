@@ -1,0 +1,118 @@
+{
+    "infoproduct":[
+        {
+            "id":1,
+            "img":"https://i.ibb.co/DkYFvsP/img0.png",
+            "alt":"Arepas",
+            "title":"AreBurguer",
+            "description":"Deliciosa Hamburguesa de arepa",
+            "price":"$6000",
+            "recommended":1,
+            "category":"Arepas"
+        },
+        {
+            "id":2,
+            "img":"https://i.ibb.co/SnShxB9/img1.png",
+            "alt":"Arepas",
+            "title":"Queso y Mortadela",
+            "description":"La Más Vendida",
+            "price":"$2500",
+            "recommended":0,
+            "category":"Arepas"
+
+        },
+        {
+            "id":3,
+            "img":"https://i.ibb.co/HhFJ9gv/img3.png",
+            "alt":"Arepas",
+            "title":"Carne Desmechada",
+            "description":"Arepa Rellena de carene Desmechada y queso",
+            "price":"$5000",
+            "recommended":0,
+            "category":"Arepas"
+        },
+        {
+            "id":4,
+            "img":"https://i.ibb.co/X8Xmwtm/img4.png",
+            "alt":"Arepas",
+            "title":"Mixta Carne y Pollo",
+            "description":"Doble Sabor",
+            "price":"$5500",
+            "recommended":1,
+            "category":"Arepas"
+        },
+        {
+            "id":5,
+            "img":"https://i.ibb.co/fNN6BLb/img2.png",
+            "alt":"Arepas",
+            "title":"Criolla",
+            "description":"Arepa Rellena con Carne,Maiz Dulce ,Queso,Trocitos de Chorizo ",
+            "price":"$6000",
+            "recommended":1,
+            "category":"Arepas"
+        },
+        {
+            "id":6,
+            "img":"https://i.ibb.co/vHjJwrc/img5.png",
+            "alt":"Arepas",
+            "title":"Adicional aguacate",
+            "description":"aguacate porcion de 30 gr",
+            "price":"$1500",
+            "recommended":0,
+            "category":"Adicionales"
+        },
+        
+        {
+            "id":7,
+            "img":"https://i.ibb.co/NskVnNk/img6.png",
+            "alt":"Arepas",
+            "title":"Adicional Queso",
+            "description":"Queso porcion de 20 gr",
+            "price":"$1500",
+            "recommended":1,
+            "category":"Adicionales"
+        },
+        {
+            "id":8,
+            "img":"https://i.ibb.co/1KkF24f/img7.png",
+            "alt":"Arepas",
+            "title":"Adicional Salsa De La Casa",
+            "description":"Salsa porcion de 10 gr",
+            "price":"$1500",
+            "recommended":0,
+            "category":"Adicionales"
+        },
+        {
+            "id":9,
+            "img":"https://i.ibb.co/mT9bNzd/img8.png",
+            "alt":"Arepas",
+            "title":"Bebidas Natural",
+            "description":"Limonada Natural",
+            "price":"$2500",
+            "recommended":1,
+            "category":"Bebidas Naturales"
+        },
+        {
+            "id":10,
+            "img":"https://i.ibb.co/VHV3Pg3/img9.png",
+            "alt":"Arepas",
+            "title":"Bebida",
+            "description":"Limonada de Coco",
+            "price":"$3500",
+            "recommended":1,
+            "category":"Bebidas Naturales"
+        },
+        {
+            "id":11,
+            "img":"https://i.ibb.co/ZdXdPhx/img10.png",
+            "alt":"Arepas",
+            "title":"Bebida Gaseosa",
+            "description":"Gaseosa Personal",
+            "price":"$3500",
+            "recommended":0,
+            "category":"Bebidas Gaseosa"
+        }
+    
+    
+    ]
+}
