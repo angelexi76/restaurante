@@ -301,6 +301,7 @@ footer{
    transform: translate(-50% ,-50%);
    align-items: center;
    background:var(--lightOrange);
+   color: white;
    
 }
 
@@ -336,13 +337,35 @@ footer{
 
 
 
-.view{
+.order{
     position: relative;
     width: 414px;
     height: 896px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
    
+}
+
+.container-order{
+    background: var(--red);
+}
+
+.container-order section{
+        background: var(--white);
+        border-radius: 25px 25px 0 0 ;
+       /*  height: 100vh; */
+}  
+    
+.add{
+        align-items:flex-end;
+        background: var(--redWine);
+    
+    
+}
+    
+.add h2{
+        align-items: center;
+        color: var(--redWine);
 }
 
 

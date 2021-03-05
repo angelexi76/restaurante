@@ -12,12 +12,13 @@ import Product from "../components/Product";
 import Footer from "../components/Footer";
 
 
-
-function Index2() {
+/* aca paso el estado del padre osea app.js */
+function Index2({conterglobal,setConterglobal}) {
   const [show,setShow] = useState("btn-container")
   const handleClick = ()=>{
     if (show === "btn-container"){
       setShow("btn-container active")
+      
       
     }
     else {setShow("btn-container")}
@@ -28,7 +29,6 @@ function Index2() {
   const activeCategory=(category)=>{
    setShowCategory(category)
   }
-
 
     return (
   
@@ -42,8 +42,12 @@ function Index2() {
  </header>
  <ContainerCategories activeCategory={activeCategory} showCategory={showCategory}/> 
  <ContainerProducts>
+
+  
  {infoproduct.map((item) => (
+ 
                     <Product
+                    id={item.id}
                     img={item.img}
                     alt={item.alt}
                     title={item.title}
@@ -52,10 +56,17 @@ function Index2() {
                     recommended={item.recommended}
                     category={item.category}
                     showCategory={showCategory}            
-                    key={item.title} />
+                    key={item.id}
+                    conterglobal={conterglobal} setConterglobal={setConterglobal}/>
+                    /* aca lo paso el conterglobal al nieto para utilizarlo en product */
         ))}
+      
+
  </ContainerProducts> 
- <Footer/>
+ 
+     
+ 
+<Footer conterglobal={conterglobal}></Footer>     
 
  
 
