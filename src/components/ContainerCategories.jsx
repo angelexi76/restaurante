@@ -7,6 +7,7 @@ const ContainerCategories = ({activeCategory})=> {
 
           <div className="categories">
             <h2 className="categories-title">Categorías</h2>
+            
             <div className="classification-button">
               <button onClick={()=>activeCategory("Recomendados")}className={showcategories==="Recomendados"?"btn-category active":"btn-category"}>Recomendados</button>
               <button onClick={()=>activeCategory("Arepas")}className={showcategories==="Arepas"?"btn-category active":"btn-category"}>Arepas</button>
@@ -15,6 +16,7 @@ const ContainerCategories = ({activeCategory})=> {
               <button onClick={()=>activeCategory("Bebidas Gaseosa")}className={showcategories==="Bebidas Gaseosa"?"btn-category active":"btn-category"}>Bebidas Gaseosa</button>
             </div>
           </div>
+          <h2>Recomendado</h2>
         </div>
     )
     }

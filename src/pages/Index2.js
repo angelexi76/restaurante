@@ -10,10 +10,12 @@ import ContainerProducts from "../components/ContainerProducts";
 import {infoproduct} from "../Api/product.json";
 import Product from "../components/Product";
 import Footer from "../components/Footer";
+import Cart from "../components/Cart";
+
 
 
 /* aca paso el estado del padre osea app.js */
-function Index2({conterglobal,setConterglobal}) {
+function Index2({conterglobal,setConterglobal,showCategory,setShowCategory}) {
   const [show,setShow] = useState("btn-container")
   const handleClick = ()=>{
     if (show === "btn-container"){
@@ -25,7 +27,7 @@ function Index2({conterglobal,setConterglobal}) {
 
     
   }
-  const [showCategory, setShowCategory]=useState("Recomendados")
+ 
   const activeCategory=(category)=>{
    setShowCategory(category)
   }

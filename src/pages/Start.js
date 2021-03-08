@@ -11,37 +11,13 @@ import ShoppingCart from "./ShoppingCart";
 
 
 
-function Order() {
+function Start() {
 
-  
-
-  const PHONE = 3108003876;
-  const request = [];
-
-  infoproduct.forEach((item, id) => {
-    request.push(`Producto ${id+1}
-     
-      descripcion: ${item.price}//
-    `);
-  });
-
-  const MESSAGE = `Tu Pedido:
-  
-  ${request.join(`
-  `)}
-  `;
-
-  console.log(MESSAGE)
-
-  return (
-    <Product
-      infoproduct={infoproduct}
-      phone={PHONE}
-      message={MESSAGE}
-    />
+ return (
+    <NavHeader/>
   )
 }
 
 
-export default Order;
+export default Start;
 

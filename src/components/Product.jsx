@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 
-/*const {title,price,id} =sale error cuando coloco product pero es lo q se quiere mostrar*/ 
-const Product = ({id,img, alt,title,description,price,recommended,category,showCategory,cart,setCart,conterglobal,setConterglobal})=> {
-const [conter,setConter]=useState(0)/* aca creo el estado de conetr */
+
+const Product = ({id,img, alt,title,description,price,recommended,category,showCategory,conterglobal,setConterglobal})=> {
+const [conter,setConter]=useState(0)/* aca creo el estado de conter */
 function restar(){
     
     if (conter>0){
@@ -18,7 +18,7 @@ function sumar(){
     return (
 
 
-         
+/* aca validamos para q clasifiq la categoria de cada prod del JSON,sea = al boton al q se le da click .cuando le de click a recomendados nos muestre los q tienen recommende 1*/         
         <div className={category===showCategory||(showCategory==="Recomendados"&&recommended===1)?"product show":"product"}>
             <img src={img} alt={alt}/>
             <div className="product-text">
@@ -35,12 +35,7 @@ function sumar(){
             </div>
             </div>
      
-            {/* <div>
-                <ul>esto es para q se muestre el nombre del prod y el precios
-                    <li>{title}</li>
-                    <li>{price}</li>
-                </ul>
-            </div>*/}
+        
         </div> 
 
     )
