@@ -19,7 +19,11 @@
 
 
 /*con var llamo los colores del root─*/
+@media screen and (max-width:1400px){
+
+}
 body{
+    
     font-family: 'poppins',sans-serif;
     background:var(--white) ;
 }
@@ -132,10 +136,12 @@ header{
      align-items:center;
      font-size: 14px;
      
+     
     
  }
  .logo-container .logo{
      line-height: 0;
+     position: relative;
  }
  .logo-text{
      background: var(--lightOrange);
@@ -288,6 +294,8 @@ flex auto envia el footer abajo*/
 footer{
     position: relative;
     color: var(--white);
+   
+    
 
 }
 /*el carrito boton, se maneja % xq es mas practico x el responsive*/
@@ -298,34 +306,37 @@ footer{
    height: 60px;
    font-size: 30px;
    border-radius: 50px;
-   display: flex;
-   top: 15%;
-   justify-content: center;
-   z-index: 1;
-   transform: translate(-50% ,-50%);
-   align-items: center;
+   display:flex;
+   top: 3%;
+   justify-content:center;
+   z-index:1;
+   transform: translate(-50%,-65%);
+   align-items:center;
    background:var(--lightOrange);
    color: white;
+  
+   
    
 }
 
 .inner-btn-menu{
-    width: 100%;
-    height: 70px;
+    width: 110%;
+    height: 90px;
     background:var(--red);
     clip-path: polygon(50% 0, 100% 30%, 100% 100%, 0 100%, 0 30%);
     display:flex;
     justify-content: space-between;
-    font-size: 37px;
+    font-size: 40px;
     align-items: center;
     padding:10px 30px 0 30px ;
+    margin-top: 180px;
 }
 
 /*circulo sobre el carrito*/
 .quantity{
-    width: 14px;
-    height: 14px;
-    font-size: 12px;
+    width: 16px;
+    height: 16px;
+    font-size: 13px;
     background: var(--white);
     border-radius: 14px;
     color:  var(--dark);
@@ -338,6 +349,8 @@ footer{
     align-items: center;
 
 }
+
+
 .container-cart{
     background: var(--red);
     
@@ -371,12 +384,105 @@ p{
     padding: 20px;
 }
 
+.Enviar{
+   
+    position:absolute;
+    bottom:50px;
+    left: 35%; 
+}
+
 h3{
 color: var(--redWine);
 text-align: center;
-padding: 5px,20px,0,0;
+
 
 
 }
+.total{
+display: flex;
+justify-content: space-between;
+}
+
+/* inicia cart */
 
 
+ 
+
+.container-log{
+    position:absolute;
+    width: 150px;
+    height: 150px;
+    left: 200px;
+    top: 100px;
+    line-height:0;
+    display:flex;
+    flex-direction: column;
+   
+}
+
+
+
+  
+
+.container-mas .next{
+    position:absolute;
+    margin-top: 1200px;
+    width: 337px;
+    height: 52px;
+    
+    background-color: var(--red);
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 25px;
+    
+} 
+.next{
+    position:absolute;
+    margin-left: 90px;
+     
+}
+.curved-div {
+    position: relative;
+    background:#EE2C2C;
+    color:var(--white);
+    text-align: center;
+    overflow: hidden;
+    
+  
+  }
+  .curved-div svg {
+    display: block;
+    
+  }
+  .curved-div.upper {
+    background: #fff;
+   
+    
+  }
+  .curved-div h1 {
+    font-size: 5rem;
+    margin-top:0rem;
+    
+  }
+
+  .mov{
+      animation:bounce1 .8s alternate infinite ease-in;
+      position:absolute;
+      width: 160px;
+      height: 160px;
+      left: 100px;
+      top: 20px;
+      line-height:0;
+      display:flex;
+      flex-direction: column;
+  }
+  @keyframes bounce1{
+      0%{
+          transform: translateY(-40%);
+      }
+  }
+  .curved-div p {
+    font-size: 1rem;
+    margin:0 5rem 0rem 5rem;
+    
+  }

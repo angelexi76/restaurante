@@ -1,4 +1,5 @@
 import React from "react"
+import Media from 'react-media';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
@@ -13,10 +14,10 @@ const Footer = ({conterglobal})=> {
             </div> 
           </Link>
           <div class="inner-btn-menu">
-            {/*  /* <i class="fas fa-home"></i> */ }
-              <FontAwesomeIcon icon="home" />
-            {/*  /* <i class="fas fa-cog"></i> */ }
-              <FontAwesomeIcon icon="cog" />
+            {/*  /* <i class="fas fa-home"></i> 
+              <FontAwesomeIcon icon="home" />*/ }
+            {/*  /* <i class="fas fa-cog"></i> 
+              <FontAwesomeIcon icon="cog" />*/ }
           </div>
         </footer>
     )

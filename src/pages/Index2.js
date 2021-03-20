@@ -10,12 +10,12 @@ import ContainerProducts from "../components/ContainerProducts";
 import {infoproduct} from "../Api/product.json";
 import Product from "../components/Product";
 import Footer from "../components/Footer";
-import Cart from "../components/Cart";
+
 
 
 
 /* aca paso el estado del padre osea app.js */
-function Index2({conterglobal,setConterglobal,showCategory,setShowCategory}) {
+function Index2({conterglobal,setConterglobal,showCategory,setShowCategory,list,setList}) {
   const [show,setShow] = useState("btn-container")
   const handleClick = ()=>{
     if (show === "btn-container"){
@@ -38,7 +38,7 @@ function Index2({conterglobal,setConterglobal,showCategory,setShowCategory}) {
 
 <div className="container">
  <header className="header">
-   <NavHeader handleClick={handleClick} show={show}/>
+   <NavHeader handleClick={handleClick} show={show} route={"/"}/* para donde se va para inicio} *//>
    <ContainerNotice />
    
  </header>
@@ -59,7 +59,10 @@ function Index2({conterglobal,setConterglobal,showCategory,setShowCategory}) {
                     category={item.category}
                     showCategory={showCategory}            
                     key={item.id}
-                    conterglobal={conterglobal} setConterglobal={setConterglobal}/>
+                    conterglobal={conterglobal} 
+                    setConterglobal={setConterglobal}
+                    list={list}
+                    setList={setList}/>
                     /* aca lo paso el conterglobal al nieto para utilizarlo en product */
         ))}
       

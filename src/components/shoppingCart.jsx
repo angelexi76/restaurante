@@ -1,4 +1,5 @@
 import React from "react"
+import Media from 'react-media';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const shoppingCart = ({handleClick,show,back})=> {  
     return(

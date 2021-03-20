@@ -4,6 +4,7 @@ import Start from "./pages/Start";
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import Media from 'react-media';
 import { faChevronRight, faChevronLeft, faSearch ,faShoppingCart, faHome, faCog, faSquare} from '@fortawesome/free-solid-svg-icons';
 import ShoppingCart from "./pages/ShoppingCart"
 import { useState } from "react";
@@ -13,18 +14,20 @@ library.add(fab, faChevronRight, faChevronLeft, faSearch,faShoppingCart, faHome,
 function App() {
   const[conterglobal,setConterglobal]= useState(0)
   const [showCategory, setShowCategory]=useState("Recomendados")
+  const[list,setList]=useState([])
   /* const[increase, SetDecrease] =useState (0) *//*  coloque los hooks de cart */
   return (
    <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-          <Index2 conterglobal={conterglobal} setConterglobal={setConterglobal} showCategory={showCategory} setShowCategory={setShowCategory}/>
-    
+      <Route exact path="/" component={Start}/>
+        <Route exact path="/index">
+          <Index2 conterglobal={conterglobal} setConterglobal={setConterglobal} showCategory={showCategory} setShowCategory={setShowCategory} list={list} setList={setList}/>
+            
         </Route>
-
-        <Route exact path="/order" component={Start}/>
+          
+        
         <Route exact path="/shopping-cart">
-          <ShoppingCart conterglobal={conterglobal} setConterglobal={setConterglobal} showCategory={showCategory}/>
+          <ShoppingCart conterglobal={conterglobal} setConterglobal={setConterglobal} showCategory={showCategory}list={list} setList={setList}/>
         </Route>
         
       </Switch>

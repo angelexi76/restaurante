@@ -15,21 +15,27 @@ import Cart from "../components/Cart";
 
 
  
- function ShoppingCart({conterglobal, setConterglobal,showCategory}) {
+ function ShoppingCart({conterglobal, setConterglobal,showCategory,list,setList}) {
+let total=0;
+list.forEach(element => {
+   total+=element.price *element.cant
+   
+});
+/* si el producto en su cantidad tiene mas de 0,no nos envie ese elmento de la list */
+const products=[]
+list.forEach(element=>{
+   if(element.cant!==0) {
+      products.push(`producto:${element.title} cantidad:${element.cant}...`)
 
-  
+   }
+})
+const message=`${products.join(``)} Total:$${total}`
     return(
     <div className="container">
         <header className="header">
-        <NavHeader  show={"btn-container"}/>
-
-       
-       
-
-
-        
+        <NavHeader  show={"btn-container"} route={"/index"}/>
         </header>
-        <ContainerProducts>
+  <ContainerProducts>
 
   
 {infoproduct.map((item) => (
@@ -41,11 +47,14 @@ import Cart from "../components/Cart";
                    title={item.title}
                    description={item.description}
                    price={item.price}
-                   recommended={item.recommended}
-                   category={item.category}
+                   /* recommended={item.recommended}
+                   category={item.category} */
                    showCategory={showCategory}            
                    key={item.id}
-                   conterglobal={conterglobal} setConterglobal={setConterglobal}/>
+                   conterglobal={conterglobal} setConterglobal={setConterglobal}
+                   list={list}
+                   setList={setList}
+                   cart={true}/>
                    /* aca lo paso el conterglobal al nieto para utilizarlo en product */
        ))}
      
@@ -55,7 +64,7 @@ import Cart from "../components/Cart";
 
         
         
- {/* <Cart/> */}
+ <Cart total={total}message={message}/>
     </div>
 
         
