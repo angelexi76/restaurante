@@ -1,14 +1,11 @@
-import Media from 'react-media';
 import { Order } from "@fortawesome/free-brands-svg-icons"
 import React, { useEffect, useState } from "react"
 
 
 const Product = ({id,img, alt,title,description,price,recommended,category,showCategory,conterglobal,setConterglobal,list,setList,cart})=> {
-const [conter,setConter]=useState(0)/* aca creo el estado de conter */
+const [conter,setConter]=useState(0)
 function restar(){
-/*  aca decimos cuando le de clik si el contador esta x encima de 0 le va a
-restar 1 tanto a conter como al conter global y recorremos la list ,si ya el prod esta dentro
-de la lista si ya esta pedido a la cantidad le va restar 1 en foreach estamos recorriendo lista y le pusimos elemento a la lista*/    
+
     if (conter>0){
         setConter(conter-1)
         setConterglobal(conterglobal-1)
@@ -46,8 +43,7 @@ function sumar(){
         ])
     }
 }
-/* aca le decimos si list esta vacia no hacer nada list some lo q nos dice ai 
-este elemto esta dentro de list asigna la cantidad al conter  */
+
 useEffect(()=>{
     assign()
 },[])
@@ -64,14 +60,13 @@ const assign=()=>{
 
 
         <div className={category===showCategory||(showCategory==="Recomendados"&&recommended===1)||(cart&&list.some(element=>element.id===id))? "product show":"product"}>  
- {/* cart va a ser true para q se cumpla la condicion,pero solo en cart */} 
+
 
             <img src={img} alt={alt}/>
             <div className="product-text">
             <h4 className="product-title">{title}</h4>
             <p className="product-description">{description}</p>
-            <p className="product-price">{`$${price}`}</p>               {/*  el precio q va a renderizar */}
-            
+            <p className="product-price">{`$${price}`}</p>              
             
 
             <div className="contadores">

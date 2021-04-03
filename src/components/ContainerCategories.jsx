@@ -17,7 +17,7 @@ const ContainerCategories = ({activeCategory})=> {
               <button onClick={()=>activeCategory("Bebidas Gaseosa")}className={showcategories==="Bebidas Gaseosa"?"btn-category active":"btn-category"}>Bebidas Gaseosa</button>
             </div>
           </div>
-          <h2>Recomendado</h2>
+         
         </div>
     )
     }
