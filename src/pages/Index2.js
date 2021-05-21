@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import {Link} from "react-router-dom"
-/* import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faChevronLeft, faSearch, faShoppingCart, faHome, faCog}from "@fortawesome/free-solid-svg-icons"
- */
+
 import NavHeader from "../components/NavHeader";
 import ContainerNotice from "../components/ContainerNotice";
 import ContainerCategories from "../components/ContainerCategories";
@@ -14,7 +12,7 @@ import Footer from "../components/Footer";
 
 
 
-/* aca paso el estado del padre osea app.js */
+
 function Index2({conterglobal,setConterglobal,showCategory,setShowCategory,list,setList}) {
   const [show,setShow] = useState("btn-container")
   const handleClick = ()=>{
@@ -38,7 +36,7 @@ function Index2({conterglobal,setConterglobal,showCategory,setShowCategory,list,
 
 <div className="container">
  <header className="header">
-   <NavHeader handleClick={handleClick} show={show} route={"/"}/* para donde se va para inicio} *//>
+   <NavHeader handleClick={handleClick} show={show} route={"/"}/>
    <ContainerNotice />
    
  </header>
@@ -63,7 +61,7 @@ function Index2({conterglobal,setConterglobal,showCategory,setShowCategory,list,
                     setConterglobal={setConterglobal}
                     list={list}
                     setList={setList}/>
-                    /* aca lo paso el conterglobal al nieto para utilizarlo en product */
+                    
         ))}
       
 

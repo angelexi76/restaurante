@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import Media from 'react-media';
+import React, { useState } from 'react';
+
 const ContainerCategories = ({activeCategory})=> {
   const [showcategories,setShowCategories]= useState ("Recomendados")
 
