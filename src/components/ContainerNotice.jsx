@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react"
-import Media from 'react-media';
+import React, { useState, useEffect } from "react";
 import logo1 from '../assets/img/logo1.png';
 
 

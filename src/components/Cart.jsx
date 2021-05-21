@@ -1,6 +1,6 @@
-import React,{ useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Media from 'react-media';
+import React from 'react';
+
+
 
 
 
@@ -23,7 +23,7 @@ const Cart = ({total,message})=>  {
     </div>
     
 
-  <a href={`https://api.whatsapp.com/send?phone=573194680119&text=${message}`} target='_blank'>
+  <a href={`https://api.whatsapp.com/send?phone=573108003876&text=${message}`} rel="noreferrer" target='_blank' >
     <button className="Enviar">
       <h3>Enviar Pedido</h3>
     </button>

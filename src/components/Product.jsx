@@ -1,4 +1,4 @@
-import { Order } from "@fortawesome/free-brands-svg-icons"
+/* import { Order } from "@fortawesome/free-brands-svg-icons" */
 import React, { useEffect, useState } from "react"
 
 
@@ -18,9 +18,7 @@ function restar(){
     }
 
 }
-/* esta funcion cuando le da click al + editamos el conter y el conterglobal para q le agrege 1
-luego le decimos si la lista tiene un elemto con este id agrege 1,en cant sino me va a crear ese elemto en el array
-...la lista como la tiene con lo q ya tiene y sumale esto*/
+
 function sumar(){
     setConter(conter+1)
     setConterglobal(conterglobal+1)
