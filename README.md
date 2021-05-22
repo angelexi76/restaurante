@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+incluir Bootstrap en React
+1. instalar bootstrap
+npm install bootstrap
+Importa las librerias de bootstrap
+En node_modules se agregarán los archivos de bootstrap. Ve al archivo index.js de tu proyecto y justo al principio pones el siguiente código para importar la librería
+
+2. import 'bootstrap/dist/css/bootstrap.min.css';
+
+
